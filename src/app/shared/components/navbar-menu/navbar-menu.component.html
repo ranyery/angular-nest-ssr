@@ -2,7 +2,8 @@
   <ul class="navbar-menu__list">
     <ng-container *ngFor="let item of menuItems">
       <li class="navbar-menu__item" *ngIf="item.isEnabled">
-        <a class="navbar-menu__link" [routerLink]="item.route" routerLinkActive="navbar-menu__link--active">
+        <a class="navbar-menu__link" [routerLink]="item.route" routerLinkActive="navbar-menu__link--active"
+          [routerLinkActiveOptions]="{ exact: true }">
           {{ item.label }}
         </a>
       </li>
