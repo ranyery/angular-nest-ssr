@@ -14,7 +14,8 @@
     "vercel-build": "npm run prerender && npm run minify-html && npm run purge-css",
     "prebuild:ssr": "ngcc",
     "minify-html": "node minifyHtml.js",
-    "purge-css": "npx purgecss -css dist/browser/*.css --content dist/browser/index.original.html dist/browser/*.js -o dist/browser/"
+    "purge-css": "npx purgecss -css dist/browser/*.css --content dist/browser/index.original.html dist/browser/*.js -o dist/browser/",
+    "install:clean": "rm -rf node_modules/ && npm cache clean --force && npm ci"
   },
   "private": true,
   "dependencies": {
