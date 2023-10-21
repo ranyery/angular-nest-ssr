@@ -1,14 +1,12 @@
-// @ts-check
+const { default: minify } = require('@node-minify/core');
+const { default: htmlMinifier } = require('@node-minify/html-minifier');
 
-const { default: minify } = require("@node-minify/core");
-const { default: htmlMinifier } = require("@node-minify/html-minifier");
+const path = require('path');
+const { existsSync, readdirSync, lstatSync } = require('fs');
 
-const path = require("path");
-const { existsSync, readdirSync, lstatSync } = require("fs");
-
-function fromDir(startPath, filter) {
+function fromDir(startPath: string, filter: string) {
   if (!existsSync(startPath)) {
-    console.log("no dir ", startPath);
+    console.log('no dir ', startPath);
     return;
   }
 
@@ -23,8 +21,8 @@ function fromDir(startPath, filter) {
         compressor: htmlMinifier,
         input: filename,
         output: filename,
-        callback: (err) => {
-          const [icon, result] = [err ? "🔴" : "🟢", err ? "Error" : "Success"];
+        callback: (err: any) => {
+          const [icon, result] = [err ? '🔴' : '🟢', err ? 'Error' : 'Success'];
           console.log(`${icon} ${result} minify: ${filename}`);
         },
       });
@@ -32,4 +30,4 @@ function fromDir(startPath, filter) {
   }
 }
 
-fromDir("./dist/browser", ".html");
+fromDir('./dist/browser', '.html');

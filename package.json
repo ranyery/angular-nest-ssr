@@ -13,7 +13,7 @@
     "prerender": "ng run angular-nest-ssr:prerender",
     "vercel-build": "npm run prerender && npm run minify-html && npm run purge-css",
     "prebuild:ssr": "ngcc",
-    "minify-html": "node minifyHtml.js",
+    "minify-html": "npx ts-node-dev --transpile-only scripts/minifyHtml.ts",
     "purge-css": "npx purgecss -css dist/browser/*.css --content dist/browser/index.original.html dist/browser/*.js -o dist/browser/",
     "install:clean": "rm -rf node_modules/ && npm cache clean --force && npm ci"
   },
@@ -59,6 +59,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "purgecss": "^5.0.0",
+    "ts-node-dev": "^2.0.0",
     "typescript": "~5.1.3"
   }
 }
