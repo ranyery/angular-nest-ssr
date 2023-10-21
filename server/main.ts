@@ -3,7 +3,8 @@ import { NestFactory } from '@nestjs/core';
 
 import { AppModule } from './app.module';
 
-async function bootstrap() {
+// The bootstrap function is exported so that it can be used by serverless Functions.
+export async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const PORT = process.env['PORT'] || 4000;
 
@@ -11,8 +12,9 @@ async function bootstrap() {
   app.enableShutdownHooks();
   app.getHttpAdapter().getInstance().disable('x-powered-by');
 
-  await app.listen(PORT);
-  Logger.log(`🚀 Application is running on: http://localhost:${PORT}`);
+  await app.listen(PORT, () => {
+    Logger.log(`🚀 Application is running on: http://localhost:${PORT}`);
+  });
 }
 
 // Webpack will replace 'require' with '__webpack_require__'
