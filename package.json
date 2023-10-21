@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run angular-nest-ssr:serve-ssr",
-    "serve:ssr": "node dist/angular-nest-ssr/server/main.js",
+    "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build && ng run angular-nest-ssr:server",
     "prerender": "ng run angular-nest-ssr:prerender",
     "prebuild:ssr": "ngcc"

@@ -8,7 +8,7 @@ import { AppServerModule } from '../src/main.server';
   imports: [
     AngularUniversalModule.forRoot({
       bootstrap: AppServerModule,
-      viewsPath: join(process.cwd(), 'dist/angular-nest-ssr/browser'),
+      viewsPath: join(process.cwd(), 'dist/browser'),
     }),
   ],
 })
