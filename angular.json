@@ -90,7 +90,6 @@
             "outputPath": "dist/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
-            "inlineStyleLanguage": "scss",
             "externalDependencies": [
               "@nestjs/microservices",
               "@nestjs/microservices/microservices-module",
@@ -101,8 +100,7 @@
           },
           "configurations": {
             "production": {
-              "outputHashing": "media",
-              "optimization": false
+              "outputHashing": "media"
             },
             "development": {
               "buildOptimizer": false,
