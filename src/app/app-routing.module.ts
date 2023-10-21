@@ -25,7 +25,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/about-us/about-us.module').then((m) => m.AboutUsModule),
   },
-  { path: '**', redirectTo: '' },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./modules/not-found/not-found.module').then(
+        (m) => m.NotFoundModule
+      ),
+  },
 ];
 
 @NgModule({
