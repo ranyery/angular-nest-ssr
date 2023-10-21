@@ -7,6 +7,23 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./modules/products/products.module').then(
+        (m) => m.ProductsModule
+      ),
+  },
+  {
+    path: 'blog',
+    loadChildren: () =>
+      import('./modules/blog/blog.module').then((m) => m.BlogModule),
+  },
+  {
+    path: 'about-us',
+    loadChildren: () =>
+      import('./modules/about-us/about-us.module').then((m) => m.AboutUsModule),
+  },
   { path: '**', redirectTo: '' },
 ];
 
