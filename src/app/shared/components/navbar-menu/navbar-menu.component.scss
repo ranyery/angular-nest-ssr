@@ -1,0 +1,31 @@
+.navbar-menu {
+  background-color: #343a40;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__link {
+    display: flex;
+    padding: 16px;
+    color: #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    transition: all 200ms ease;
+
+    &--active {
+      font-weight: bold;
+      opacity: 1;
+    }
+
+    &:hover:not(&--active) {
+      opacity: 1;
+    }
+  }
+}

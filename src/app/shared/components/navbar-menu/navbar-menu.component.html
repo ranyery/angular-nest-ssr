@@ -1,0 +1,11 @@
+<nav class="navbar-menu">
+  <ul class="navbar-menu__list">
+    <ng-container *ngFor="let item of menuItems">
+      <li class="navbar-menu__item" *ngIf="item.isEnabled">
+        <a class="navbar-menu__link" [routerLink]="item.route" routerLinkActive="navbar-menu__link--active">
+          {{ item.label }}
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>
