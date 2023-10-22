@@ -15,6 +15,7 @@
     "prebuild:ssr": "ngcc",
     "lint": "npm run lint:styles && ng lint --fix",
     "lint:styles": "npx stylelint src/**/*.scss --fix",
+    "format": "npx prettier --log-level warn ./**/*.{html,scss,json,js,ts} --write",
     "minify-html": "npx ts-node-dev --transpile-only scripts/minifyHtml.ts",
     "purge-css": "npx purgecss -css dist/browser/*.css --content dist/browser/index.html dist/browser/*.js -o dist/browser/",
     "install:clean": "rm -rf node_modules/ && npm cache clean --force && npm ci"
@@ -75,6 +76,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "^3.0.3",
+    "prettier-eslint": "^16.1.1",
     "purgecss": "^5.0.0",
     "stylelint": "^14.16.1",
     "stylelint-config-idiomatic-order": "^9.0.0",
