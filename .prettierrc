@@ -28,6 +28,10 @@
       "options": {
         "singleQuote": false
       }
+    },
+    {
+      "files": "*.html",
+      "options": { "parser": "angular" }
     }
   ]
 }
