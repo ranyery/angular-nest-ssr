@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { RESPONSE } from '@nestjs/ng-universal/dist/tokens';
 import { Response } from 'express';
+import { StatusCodes as HTTP_STATUS_CODES } from 'http-status-codes';
 import { PlatformService } from 'src/app/shared/services/platform.service';
 import { SeoService } from 'src/app/shared/services/seo.service';
 
@@ -31,7 +32,7 @@ export class NotFoundPage implements OnInit {
   ngOnInit(): void {
     if (this._platformService.isServer()) {
       console.log('Running on the server');
-      this._response.status(404);
+      this._response.status(HTTP_STATUS_CODES.NOT_FOUND);
     }
 
     if (this._platformService.isBrowser()) {
