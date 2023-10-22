@@ -6,8 +6,6 @@ export class SeoService {
   private readonly _meta = inject(Meta);
   private readonly _title = inject(Title);
 
-  constructor() {}
-
   public setTitle(title: string): void {
     this._title.setTitle(title);
     this._meta.updateTag({ name: 'title', content: title });
