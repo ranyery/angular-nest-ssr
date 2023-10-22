@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,7 +8,12 @@ import { NavbarMenuModule } from './shared/components/navbar-menu/navbar-menu.mo
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NavbarMenuModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NavbarMenuModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

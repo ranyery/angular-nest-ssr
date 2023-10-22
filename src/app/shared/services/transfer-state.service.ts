@@ -4,14 +4,12 @@ import { inject, Injectable, makeStateKey, TransferState } from '@angular/core';
 export class TransferStateService {
   private readonly _transferState = inject(TransferState);
 
-  public saveState<T>(key: string, data: any): void {
+  public saveState<T>(key: string, data: T): void {
     this._transferState.set<T>(makeStateKey(key), data);
   }
 
-  public getState<T>(key: string, defaultValue: any = []): T {
-    const state = this._transferState.get<T>(makeStateKey(key), defaultValue);
-    this._transferState.remove(makeStateKey(key));
-    return state;
+  public getState<T>(key: string): T {
+    return this._transferState.get<T>(makeStateKey(key), undefined as T);
   }
 
   public hasState<T>(key: string) {
