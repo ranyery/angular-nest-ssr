@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 @function px-to-rem($pxValue) {
   @return math.div($pxValue, 16) + rem;
