@@ -1,10 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Inject,
-  OnInit,
-  Optional,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, OnInit, Optional } from '@angular/core';
 import { RESPONSE } from '@nestjs/ng-universal/dist/tokens';
 import { Response } from 'express';
 import { StatusCodes as HTTP_STATUS_CODES } from 'http-status-codes';
@@ -24,9 +18,7 @@ export class NotFoundPage implements OnInit {
     @Optional() @Inject(RESPONSE) private readonly _response: Response
   ) {
     this._seoService.setTitle('Página não encontrada!');
-    this._seoService.setDescription(
-      'Descrição sobre a página não encontrada...'
-    );
+    this._seoService.setDescription('Descrição sobre a página não encontrada...');
   }
 
   ngOnInit(): void {

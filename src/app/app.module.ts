@@ -8,12 +8,7 @@ import { NavbarMenuModule } from './shared/components/navbar-menu/navbar-menu.mo
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NavbarMenuModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NavbarMenuModule],
   providers: [],
   bootstrap: [AppComponent],
 })

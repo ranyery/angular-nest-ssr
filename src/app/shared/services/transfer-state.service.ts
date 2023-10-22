@@ -1,4 +1,4 @@
-import { inject, Injectable, makeStateKey, TransferState } from '@angular/core';
+import { Injectable, TransferState, inject, makeStateKey } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class TransferStateService {

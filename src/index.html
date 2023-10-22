@@ -1,60 +1,58 @@
 <!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular Server-Side Rendering (SSR) with NestJS</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Angular Server-Side Rendering (SSR) with NestJS</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+      html {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
 
-  <style>
-    html {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
+      @font-face {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        src: url('./assets/fonts/roboto-regular.ttf') format('truetype');
+      }
 
-    @font-face {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 400;
-      src: url('./assets/fonts/roboto-regular.ttf') format('truetype');
-    }
+      @font-face {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 700;
+        src: url('./assets/fonts/roboto-bold.ttf') format('truetype');
+      }
 
-    @font-face {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 700;
-      src: url('./assets/fonts/roboto-bold.ttf') format('truetype');
-    }
+      body {
+        min-width: 280px;
+        margin: 0 auto;
 
-    body {
-      min-width: 280px;
-      margin: 0 auto;
+        color: #000;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+      }
 
-      color: #000;
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-    }
+      *,
+      *::before,
+      *::after {
+        -webkit-box-sizing: inherit;
+        -moz-box-sizing: inherit;
+        box-sizing: inherit;
+      }
 
-    *,
-    *::before,
-    *::after {
-      -webkit-box-sizing: inherit;
-      -moz-box-sizing: inherit;
-      box-sizing: inherit;
-    }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
 
-    * {
-      padding: 0;
-      margin: 0;
-    }
-  </style>
-</head>
-
-<body>
-  <app-root></app-root>
-</body>
-
+  <body>
+    <app-root></app-root>
+  </body>
 </html>
