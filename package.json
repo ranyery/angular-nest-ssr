@@ -11,11 +11,10 @@
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build && ng run angular-nest-ssr:server",
     "prerender": "ng run angular-nest-ssr:prerender",
-    "postprerender": "npm run minify-html && npm run purge-css",
-    "vercel-build": "npm run prerender",
+    "vercel-build": "npm run prerender && npm run minify-html && npm run purge-css",
     "prebuild:ssr": "ngcc",
     "minify-html": "npx ts-node-dev --transpile-only scripts/minifyHtml.ts",
-    "purge-css": "npx purgecss -css dist/browser/*.css --content dist/browser/index.original.html dist/browser/*.js -o dist/browser/",
+    "purge-css": "npx purgecss -css dist/browser/*.css --content dist/browser/index.html dist/browser/*.js -o dist/browser/",
     "install:clean": "rm -rf node_modules/ && npm cache clean --force && npm ci"
   },
   "private": true,
