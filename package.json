@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run angular-nest-ssr:serve-ssr",
+    "dev:ssr": "ng run angular-nest-ssr:serve-ssr --port 4200",
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build && ng run angular-nest-ssr:server",
     "prerender": "ng run angular-nest-ssr:prerender",
