@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://angular-nest-ssr.vercel.app/sitemap.xml

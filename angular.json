@@ -23,7 +23,12 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/sitemap.xml",
+              "src/robots.txt"
+            ],
             "styles": ["src/styles.scss"],
             "allowedCommonJsDependencies": ["@nestjs/ng-universal/dist/tokens"],
             "scripts": []
@@ -40,6 +45,12 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "bundles"
