@@ -36,8 +36,13 @@ export class HomePage implements OnInit {
   }
 
   private _fetchHello(): void {
-    this._helloWorldService.getHello().subscribe((message) => {
-      this.hello = message;
+    this._helloWorldService.getHello().subscribe({
+      next: (message) => {
+        this.hello = message;
+      },
+      error: () => {
+        // Handle
+      },
     });
   }
 }

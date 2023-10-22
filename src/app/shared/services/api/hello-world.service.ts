@@ -12,7 +12,7 @@ export class HelloWorldService {
   private readonly _fetchOrCacheService = inject(FetchOrCacheService);
 
   private readonly _baseUrl = this._platformService.isServer()
-    ? 'http://localhost:4200/api/hello-world'
+    ? 'http://localhost:4000/api/hello-world'
     : '/api/hello-world';
 
   public getHello(): Observable<{ message: string }> {

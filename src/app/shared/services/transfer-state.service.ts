@@ -12,7 +12,7 @@ export class TransferStateService {
     return this._transferState.get<T>(makeStateKey(key), undefined as T);
   }
 
-  public hasState<T>(key: string) {
+  public hasState<T>(key: string): boolean {
     return this._transferState.hasKey<T>(makeStateKey(key));
   }
 }
